@@ -1,0 +1,11 @@
+div(ng-include='"components/navbar/navbar.html"')
+
+header#banner.hero-unit
+.container
+  .row
+    .col-lg-12
+      h1.page-header Participantes:
+      ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='participant in participants')
+        li
+          a(href='#', tooltip='{{participant.id}}' ng-click="delete(participant.id)")
+            | {{participant.name}} #[span.delete X]

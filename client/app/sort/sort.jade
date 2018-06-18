@@ -1,0 +1,10 @@
+div(ng-include='"components/navbar/navbar.html"')
+
+header#banner.hero-unit
+.container
+  .row
+    .col-lg-12
+      h1.page-header Nuevo ganador:
+      .form-group
+        p.winner {{winner}}
+        button.btn.btn-default(ng-click="sort()") Sortear
